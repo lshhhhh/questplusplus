@@ -1,0 +1,10 @@
+/build/
+/dist/
+/output/
+/input/test
+/lang_resources/uwn
+*.ngram
+*models.jar
+/nbproject/
+/config/config.sentence-level.new.properties
+/manuals/Word-Level Quest++ Manual - Old.docx

@@ -1,3 +1,5 @@
+/3rdparty/
+*.pyc
 /build/
 /dist/
 /output/

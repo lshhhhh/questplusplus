@@ -35,6 +35,7 @@ from sklearn.metrics.metrics import mean_squared_error, f1_score, \
 from sklearn.svm.classes import SVR, SVC
 from sklearn_utils import scale_datasets, open_datasets, assert_number, \
     assert_string
+from sklearn import linear_model
 import logging as log
 import numpy as np
 import os
@@ -285,6 +286,20 @@ def set_learning_method(config, X_train, y_train):
                                         verbose=False)
             else:
                 estimator = LassoLarsCV()
+
+        elif method_name == "Ridge":
+            if o:
+                tune_params = set_optimization_params(o)
+                estimator = optimize_model(linear_model.Ridge(), X_train, y_train,
+                                           tune_params,
+                                           scorers,
+                                           o.get("cv", 5),
+                                           o.get("verbose", True),
+                                           o.get("n_jobs", 1))
+            elif p:
+                estimator = linear_model.Ridge(alpha = 0.5)
+            else:
+                estimator = linear_model.Ridge()
                 
     return estimator, scorers
 

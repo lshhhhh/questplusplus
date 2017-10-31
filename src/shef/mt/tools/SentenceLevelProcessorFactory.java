@@ -309,6 +309,14 @@ public class SentenceLevelProcessorFactory {
             targetProcessors.add(punctuationProcessor);
         }
 
+        if (requirements.contains("source.simplewords")) {
+            //Get complex words processors:
+            ComplexWordsProcessor complexWordsProcessor = this.getComplexWordsProcessor();
+            
+            //Add them to processor vectors:
+            sourceProcessors.add(complexWordsProcessor);
+        }
+
         //Transform array lists in vectors:
         ResourceProcessor[] sourceProcessorVector = new ResourceProcessor[sourceProcessors.size()];
         ResourceProcessor[] targetProcessorVector = new ResourceProcessor[targetProcessors.size()];
@@ -871,5 +879,19 @@ public class SentenceLevelProcessorFactory {
         }
         AbbreviationsProcessor abbreviationProcessor = new AbbreviationsProcessor(abbrevDict,position2abbrev);
         return abbreviationProcessor;
+    }
+
+    private ComplexWordsProcessor getComplexWordsProcessor() {
+        //Register resource:
+        ResourceManager.registerResource("source.simplewords");
+        
+        //Get paths to stop word lists:
+        String path = this.fe.getResourceManager().getProperty("source.simplewords");
+        
+        //Generate processors:
+        ComplexWordsProcessor processor = new ComplexWordsProcessor(path);
+
+        //Return processors:
+        return processor;
     }
 }

@@ -121,7 +121,6 @@ public class DocLevelFeatureExtractor implements FeatureExtractor {
 
         this.processListFiles();
         try {
-
             //Get next doc from sgm file (Doc class)
             //Process sentences and calculate features:
             System.out.println("\n********** Producing output **********");
@@ -135,9 +134,6 @@ public class DocLevelFeatureExtractor implements FeatureExtractor {
             ResourceProcessor[][] resourceProcessors = processorFactory.getResourceProcessors();
             ResourceProcessor[] resourceProcessorsSource = resourceProcessors[0];
             ResourceProcessor[] resourceProcessorsTarget = resourceProcessors[1];
-
-            
-
 
             while (this.getNextSourceDoc(documentCounter) != null && this.getNextTargetDoc(documentCounter) != null) {
                 sourceFile = this.getNextSourceDoc(documentCounter);
@@ -155,7 +151,6 @@ public class DocLevelFeatureExtractor implements FeatureExtractor {
                 ResourceProcessor[] docResourceProcessorsSource = docResourceProcessors[0];
                 ResourceProcessor[] docResourceProcessorsTarget = docResourceProcessors[1];
 
-                
                 //Get readers of source and target files input:
                 BufferedReader sourceBR = new BufferedReader(new FileReader(this.getSourceFile()));
                 BufferedReader targetBR = new BufferedReader(new FileReader(this.getTargetFile()));
@@ -170,7 +165,6 @@ public class DocLevelFeatureExtractor implements FeatureExtractor {
                     sourceSentences.add(sourceSentence);
                     targetSentences.add(targetSentence);
                     sentenceCounter++;
-
                 }
 
                 //Create source and target document objects:

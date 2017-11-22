@@ -7,11 +7,10 @@
 <!-- the Compile on Save feature is turned off for the project. -->
 <!-- You can turn off the Compile on Save (or Deploy on Save) setting -->
 <!-- in the project's Project Properties dialog box.-->
-<project name="QuEst++" basedir=".">
-    <description>Builds, tests, and runs the project QuEst++.</description>
-    <!--
 <project name="QuEst++" default="default" basedir=".">
+    <description>Builds, tests, and runs the project QuEst++.</description>
     <import file="nbproject/build-impl.xml"/>
+    <!--
 
     There exist several targets which are by default empty and which can be 
     used for execution of your tasks. These targets are usually executed 

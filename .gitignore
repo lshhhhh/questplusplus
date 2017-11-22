@@ -1,12 +1,14 @@
 /3rdparty/
 *.pyc
+/bin/
 /build/
 /dist/
 /output/
 /input/test
 /lang_resources/uwn
 *.ngram
-*models.jar
+*.jar
 /nbproject/
 /config/config.sentence-level.new.properties
 /manuals/Word-Level Quest++ Manual - Old.docx
+tags

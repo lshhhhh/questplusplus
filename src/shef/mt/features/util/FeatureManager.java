@@ -227,13 +227,12 @@ public class FeatureManager {
                 Integer featsNumber = f.getFeaturesNumber();
                 for (int i = 1; i <= featsNumber; i++) {
                     result.append(f.getValue(i) + "\t");
-            }
-
+                }
             } else {
                 Logger.log("Feature " + f.getIndex() + " cannot run because some of its dependencies are missing.");
                 System.out.println("Feature " + f.getIndex() + " cannot run because some of its dependencies are missing.");
                 features.remove(index);
-//				System.out.println(features.size());
+				//System.out.println(features.size());
             }
         }
 //		System.out.println("Result:");

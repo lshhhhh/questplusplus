@@ -12,9 +12,10 @@ sklearn.
 @contact:    jose.camargo.souza@gmail.com
 @deffield    updated: Updated
 '''
-from sklearn.metrics.metrics import mean_squared_error
+from sklearn.metrics import mean_squared_error
 from sklearn.metrics.pairwise import manhattan_distances
 import numpy as np
+
 
 def mean_absolute_error(x, y):
     vector = manhattan_distances(x, y)
@@ -24,11 +25,11 @@ def mean_absolute_error(x, y):
     
     return mae
 
+
 def root_mean_squared_error(x, y):
     mse = mean_squared_error(x, y)
     rmse = np.sqrt(mse)
     return rmse
-
 
 
 if __name__ == '__main__':

@@ -40,6 +40,6 @@ public class Feature1007 extends Feature {
                 curlyPlus--;
             }
         }
-        setValue(sqPlus + roundPlus + curlyPlus);
+        setValue(Math.abs(sqPlus) + Math.abs(roundPlus) + Math.abs(curlyPlus));
     }
 }

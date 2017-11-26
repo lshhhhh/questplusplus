@@ -70,9 +70,9 @@
     <feature class="shef.mt.features.impl.bb.Feature1083" description="percentage of content words in the source" index="1083"/>
     <feature class="shef.mt.features.impl.bb.Feature1084" description="percentage of content words in the target" index="1084"/>
     <feature class="shef.mt.features.impl.bb.Feature1085" description="ratio of percentage of content words in the source and target" index="1085"/>
-    <feature class="shef.mt.features.impl.bb.Feature1086" description="LM log probability of POS of the target" index="1086"/>
+<!--    <feature class="shef.mt.features.impl.bb.Feature1086" description="LM log probability of POS of the target" index="1086"/>
     <feature class="shef.mt.features.impl.bb.Feature1087" description="LM log perplexity of POS of the target" index="1087"/>
-    <feature class="shef.mt.features.impl.bb.Feature1088" description="percentage of nouns in the source" index="1088"/>
+-->    <feature class="shef.mt.features.impl.bb.Feature1088" description="percentage of nouns in the source" index="1088"/>
     <feature class="shef.mt.features.impl.bb.Feature1089" description="percentage of verbs in the source" index="1089"/>
     <feature class="shef.mt.features.impl.bb.Feature1090" description="percentage of nouns in the target" index="1090"/>
     <feature class="shef.mt.features.impl.bb.Feature1091" description="percentage of verbs in the target" index="1091"/>
@@ -107,7 +107,7 @@
     <feature class="shef.mt.features.impl.bb.Feature1122" description="Named Entity feature: difference in number of PERSON entities in source and target normalised by total number of person entities (max between english and arabic)" index="1122"/>
     <feature class="shef.mt.features.impl.bb.Feature1123" description="Named Entity feature: difference in number of ORGANIZATION entities in source and target normalised by total number of person entities (max between english and arabic)" index="1123"/>
     <feature class="shef.mt.features.impl.bb.Feature1124" description="Named Entity feature: difference in number of LOCATION entities in source and target normalised by total number of person entities (max between english and arabic)" index="1124"/-->
-     <feature class="shef.mt.features.impl.gb.Feature2001" description="log prob score of the hypothesis" index="2001"/>
+<!--     <feature class="shef.mt.features.impl.gb.Feature2001" description="log prob score of the hypothesis" index="2001"/>
     <feature class="shef.mt.features.impl.gb.Feature2002" description="-log probability score (base model) normalized by source sentence length" index="2002"/>
     <feature class="shef.mt.features.impl.gb.Feature2003" description="size of nbest list" index="2003"/>
     <feature class="shef.mt.features.impl.gb.Feature2004" description="" index="2004"/>
@@ -132,7 +132,7 @@
     <feature class="shef.mt.features.impl.gb.Feature2024" description="CMU phrase probability phrase_prob_feat_4" index="2024"/>
     <feature class="shef.mt.features.impl.gb.Feature2025" description="CMU phrase probability phrase_prob_feat_5" index="2025"/>
     <feature class="shef.mt.features.impl.gb.Feature2026" description="CMU word penalty" index="2026"/>
-    <!--feature class="shef.mt.features.impl.gb.Feature2027" description="" index="2027"/>
+-->    <!--feature class="shef.mt.features.impl.gb.Feature2027" description="" index="2027"/>
     <feature class="shef.mt.features.impl.gb.Feature2028" description="" index="2028"/>
     <feature class="shef.mt.features.impl.gb.Feature2029" description="IBM dist_sc" index="2029"/>
     <feature class="shef.mt.features.impl.gb.Feature2030" description="" index="2030"/>
@@ -147,7 +147,7 @@
     <feature class="shef.mt.features.impl.gb.Feature2039" description="" index="2039"/>
     <feature class="shef.mt.features.impl.gb.Feature2040" description="" index="2040"/>
     <feature class="shef.mt.features.impl.gb.Feature2041" description="" index="2041"/-->
-    <feature class="shef.mt.features.impl.gb.Feature2042" description="maximum size of the bi-phrases for the target sentence, in terms of number of words" index="2042"/>
+<!--    <feature class="shef.mt.features.impl.gb.Feature2042" description="maximum size of the bi-phrases for the target sentence, in terms of number of words" index="2042"/>
     <feature class="shef.mt.features.impl.gb.Feature2043" description="CMU: proportion of unknown words" index="2043"/>
     <feature class="shef.mt.features.impl.gb.Feature2044" description="relative frequency in the nbest list" index="2044"/>
     <feature class="shef.mt.features.impl.gb.Feature2045" description="averaged target word statistics: score-weighted relative frequency of the word in the n-best list " index="2045"/>
@@ -169,6 +169,6 @@
     <feature class="shef.mt.features.impl.gb.Feature2061" description="proportion of recombined graph nodes" index="2061"/>
     <feature class="shef.mt.features.impl.gb.Feature2100" description="percentage of incorrectly translated possessive pronouns" index="2100"/>
     <feature class="shef.mt.features.impl.gb.Feature2101" description="percentage of incorrectly translated direct object personal pronouns" index="2101"/>
-
+-->
 
 </features>

@@ -97,6 +97,7 @@ def set_selection_method(config):
                                 verbose=True, 
                                 normalize=p.get('normalize', True), 
                                 max_iter=p.get('max_iter', 500), 
+                                eps=2.2204460492503131e-1,
                                 n_jobs=p.get('n_jobs', 1))
             else:
                 transformer = RandomizedLasso()
@@ -337,8 +338,10 @@ def fit_predict(config, X_train, y_train, X_test=None, y_test=None, ref_thd=None
         
         log.debug("Dimensions after fit_transform(): %s,%s" % X_train.shape)
         
+        print(len(X_test[0]))
         if X_test is not None:
             X_test = transformer.transform(X_test)
+        print(len(X_test[0])) 
     
     
     # sets learning algorithm and runs it over the training data

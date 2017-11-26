@@ -311,10 +311,18 @@ public class SentenceLevelProcessorFactory {
 
         if (requirements.contains("source.simplewords")) {
             //Get complex words processors:
-            ComplexWordsProcessor complexWordsProcessor = this.getComplexWordsProcessor();
+            ComplexWordsProcessor complexWordsProcessor = this.getSourceComplexWordsProcessor();
             
             //Add them to processor vectors:
             sourceProcessors.add(complexWordsProcessor);
+        }
+
+        if (requirements.contains("target.simplewords")) {
+            //Get complex words processors:
+            ComplexWordsProcessor complexWordsProcessor = this.getTargetComplexWordsProcessor();
+            
+            //Add them to processor vectors:
+            targetProcessors.add(complexWordsProcessor);
         }
 
         //Transform array lists in vectors:
@@ -881,12 +889,26 @@ public class SentenceLevelProcessorFactory {
         return abbreviationProcessor;
     }
 
-    private ComplexWordsProcessor getComplexWordsProcessor() {
+    private ComplexWordsProcessor getSourceComplexWordsProcessor() {
         //Register resource:
         ResourceManager.registerResource("source.simplewords");
         
         //Get paths to stop word lists:
         String path = this.fe.getResourceManager().getProperty("source.simplewords");
+        
+        //Generate processors:
+        ComplexWordsProcessor processor = new ComplexWordsProcessor(path);
+
+        //Return processors:
+        return processor;
+    }
+
+    private ComplexWordsProcessor getTargetComplexWordsProcessor() {
+        //Register resource:
+        ResourceManager.registerResource("target.simplewords");
+        
+        //Get paths to stop word lists:
+        String path = this.fe.getResourceManager().getProperty("target.simplewords");
         
         //Generate processors:
         ComplexWordsProcessor processor = new ComplexWordsProcessor(path);

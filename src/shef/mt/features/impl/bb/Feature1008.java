@@ -32,6 +32,8 @@ public class Feature1008 extends Feature {
         }
         if ((doubleQ % 2 == 0) && (singleQ % 2 == 0)) {
             setValue(0);
+        } else if ((doubleQ % 2 == 1) && (singleQ % 2 == 1)) {
+            setValue(2);
         } else {
             setValue(1);
         }

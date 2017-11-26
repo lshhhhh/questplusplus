@@ -21,7 +21,6 @@ public class Feature1004 extends Feature {
     @Override
     public void run(Sentence source, Sentence target) {
         // TODO Auto-generated method stub
-
         int sourceTok = source.getNoTokens();
         int targetTok = target.getNoTokens();
         if (sourceTok == 0) {

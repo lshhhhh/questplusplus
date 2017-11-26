@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <features>
     <feature class="shef.mt.features.impl.bb.Feature7001" description="number of complex words in the source sentence" index="7001"></feature>
+    <feature class="shef.mt.features.impl.bb.Feature7002" description="number of complex words in the source sentence" index="7002"></feature>
+    <feature class="shef.mt.features.impl.bb.Feature7003" description="ratio of complex words in the source and the target" index="7003"></feature>
 </features>

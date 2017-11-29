@@ -325,6 +325,22 @@ public class SentenceLevelProcessorFactory {
             targetProcessors.add(complexWordsProcessor);
         }
 
+        if (requirements.contains("source.word2vec")) {
+            //Get word2vec processors:
+            Word2vecProcessor word2vecProcessor = this.getSourceWord2vecProcessor();
+            
+            //Add them to processor vectors:
+            sourceProcessors.add(word2vecProcessor);
+        }
+
+        if (requirements.contains("target.word2vec")) {
+            //Get word2vec processors:
+            Word2vecProcessor word2vecProcessor = this.getTargetWord2vecProcessor();
+            
+            //Add them to processor vectors:
+            targetProcessors.add(word2vecProcessor);
+        }
+
         //Transform array lists in vectors:
         ResourceProcessor[] sourceProcessorVector = new ResourceProcessor[sourceProcessors.size()];
         ResourceProcessor[] targetProcessorVector = new ResourceProcessor[targetProcessors.size()];
@@ -912,6 +928,34 @@ public class SentenceLevelProcessorFactory {
         
         //Generate processors:
         ComplexWordsProcessor processor = new ComplexWordsProcessor(path);
+
+        //Return processors:
+        return processor;
+    }
+
+    private Word2vecProcessor getSourceWord2vecProcessor() {
+        //Register resource:
+        ResourceManager.registerResource("source.word2vec");
+        
+        //Get paths to stop word lists:
+        String path = this.fe.getResourceManager().getProperty("source.word2vec");
+        
+        //Generate processors:
+        Word2vecProcessor processor = new Word2vecProcessor(path);
+
+        //Return processors:
+        return processor;
+    }
+
+    private Word2vecProcessor getTargetWord2vecProcessor() {
+        //Register resource:
+        ResourceManager.registerResource("target.word2vec");
+        
+        //Get paths to stop word lists:
+        String path = this.fe.getResourceManager().getProperty("target.word2vec");
+        
+        //Generate processors:
+        Word2vecProcessor processor = new Word2vecProcessor(path);
 
         //Return processors:
         return processor;

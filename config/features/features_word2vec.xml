@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<features>
+    <feature class="shef.mt.features.impl.bb.Feature7004" description="word2vec in the source sentence" index="7004"></feature>
+    <feature class="shef.mt.features.impl.bb.Feature7005" description="word2vec in the target sentence" index="7005"></feature>
+</features>
